@@ -31,6 +31,10 @@ header {
     width: 100%;
     height: auto;
     min-height: var(--header-height);
+    /* Fix flicker */
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .header-container {
