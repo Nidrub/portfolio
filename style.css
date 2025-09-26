@@ -274,12 +274,14 @@ section {
     background-color: rgba(143, 143, 143, 0.3);
 
 }
-
-/*we are here*/
-.test {
-    height: 100vh;
-    background-color: yellow;
-
+/*TODO -> work on the about page (figure layer later*/
+#about{
+    background-color: ghostwhite;
+    min-height: 100vh;
+}
+#about h1 {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 6rem);
 }
 
 
