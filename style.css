@@ -392,6 +392,12 @@ section {
 }
 /*adjust the image for better experience */
 @media (max-width: 750px) {
+    #home {
+        flex-direction: column;
+        align-content: center;
+        justify-content:  flex-start;
+        padding-top: 6vh;
+    }
     #headshot {
         width: 85%;
         height: 85%;
