@@ -1,7 +1,6 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
-    scroll-padding-top: 70px; /* match your navbar height */
     background: black;
 }
 
@@ -155,7 +154,7 @@ header {
 
 /*section*/
 section {
-    scroll-margin-top: var(--header-height) ;
+    scroll-margin: var(--header-height) 1vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -269,6 +268,11 @@ section {
     transform: translateY(-5px);
     background-color: rgba(143, 143, 143, 0.3);
 
+}
+/*we are here*/
+.test{
+    height: 100vh;
+    background-color: yellow;
 }
 
 
