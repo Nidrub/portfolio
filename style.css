@@ -1,0 +1,408 @@
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    background: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --header-height: 70px;
+}
+/*p*/
+p{
+    font-size: 1.2rem;
+}
+
+
+header {
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    min-height: var(--header-height);
+}
+
+.header-container {
+    display: inherit;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-wrap: initial;
+    width: 70%;
+    gap: 2vw;
+    padding: 10px 0; /* top-bottom left-right*/
+}
+
+#logo h1 {
+    color: white;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/*button*/
+.hamburger-icon {
+    width: 30px;
+    height: 30px; /* square button */
+    display: none;
+    flex-direction: column;
+    justify-content: space-around; /* evenly space bars */
+    align-items: center;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 5px; /* keeps clickable area padded */
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    border-radius: 1px;
+    background-color: lightgray;
+    transition: all 0.3s ease-in-out; /* Apply transition for smooth animation when dealing with teh changes */
+}
+
+#navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 5px;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative; /*needed for it to show under it*/
+    transition: all 0.3s ease;
+
+}
+
+/*navigation bar animations*/
+#navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust as needed */
+    width: 0;
+    height: 2px; /* Thickness of underline */
+    background-color: white; /* Uses the same color as the icon/text */
+    transition: width 0.1s ease;
+}
+
+#navbar a:hover::after {
+    width: 100%;
+}
+
+
+/*Social list*/
+#nav-social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+#nav-social li {
+    list-style: none;
+}
+
+#nav-social li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.7rem;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+    padding: 10px 0;
+}
+
+#nav-social li a:hover {
+    transform: scale(1.1) translateY(-5px);
+}
+
+/* container*/
+.container {
+    width: 75%;
+}
+
+/*section*/
+section {
+    scroll-margin: var(--header-height) 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /*    imagine it has a border*/
+}
+
+/*home*/
+#home {
+    position: relative; /* needed so overlay is positioned relative to this div */
+    background-image: url("img/img4.jpg");
+    background-size: cover;
+    min-height: 95vh;
+    width: 100%;
+    overflow: hidden; /*hide overflow*/
+}
+
+#home::before {
+    content: ""; /* pseudo-elements need content to exist */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit; /* takes the same background as #home */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%); /* darkens only the pseudo-element */
+    z-index: 0; /* stays behind the content */
+}
+
+#home > * {
+    position: relative;
+    z-index: 1; /* makes sure your text/buttons appear above the darkened background */
+}
+
+/*home container*/
+#home .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 10px;
+    max-width: 1200px;
+}
+
+/*image container*/
+.image-container {
+    display: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    height: auto;
+
+}
+
+/*text container*/
+.text-home {
+    min-width:300px;
+    flex: 3 0 0;
+    text-align: center;
+}
+.text-home h1{
+    background: linear-gradient(135deg, #C0382B, #DDE6E8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 750;
+    font-size: 4rem;
+}
+.text-home h2{
+    color: white;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+.text-home p {
+    padding-top: 10px;
+    color: #bdbdbd;
+
+}
+
+#headshot {
+    width: 60%;
+    height: 60%;
+    border: rgba(0, 0, 0, 0.3) solid 8px;
+    border-radius: 50px;
+    margin:25px 0; /*margin top-bottom left-right*/
+}
+
+.bubble {
+    text-decoration: none;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+    padding: 8px;
+    margin: 2px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+}
+
+.bubble:hover {
+    transform: translateY(-5px);
+    background-color: rgba(143, 143, 143, 0.3);
+
+}
+
+
+
+
+
+/*effects when opening */
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(80px);
+    /*whenever opacity or transform changes, ease in*/
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+.fade-in-left{
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.fade-in-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+.fade-in-up{
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.fade-in-up.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.fade-in-down{
+    opacity: 0;
+    transform: translateY(-80px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.fade-in-down.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/*at width 950*/
+@media (max-width: 950px) {
+    html {
+        font-size: 18px;
+    }
+
+    .header-container {
+        flex-wrap: wrap;
+    }
+
+    #navigation {
+        max-height: 0; /* fully hidden */
+        overflow: hidden; /* hides content until expanded */
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background: black;
+        width: 100%;
+        transition: max-height 0.4s ease-in-out; /* smooth slide */
+    }
+
+    /* When active, expand */
+    #navigation.active {
+        max-height: 300px; /* big enough for all nav items */
+    }
+
+    /*hamburger animation*/
+    .hamburger-icon {
+        display: flex;
+    }
+
+    /* Turn into X */
+    .hamburger-icon.open {
+        justify-content: center; /* stack bars in middle when open */
+        position: relative;
+    }
+
+    .hamburger-icon.open .line:nth-child(1) {
+        position: absolute;
+        transform: rotate(45deg);
+    }
+
+    .hamburger-icon.open .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-icon.open .line:nth-child(3) {
+        position: absolute;
+        transform: rotate(-45deg);
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 10px 0;
+    }
+
+    #nav-social li {
+        padding-right: 5px;
+    }
+
+    #nav-social li a:hover {
+        transform: none;
+    }
+/*    home section*/
+    .text-home h1{
+        font-size: 2rem;
+    }
+    .text-home h2{
+        font-size: 1.5rem;
+    }
+    .text-home p {
+        font-size: 1rem;
+    }
+/*    bubble*/
+    .bubble {
+        font-size: 1.8rem;
+        padding: 4px;
+    }
+
+
+}
+/*adjust the image for better experience */
+@media (max-width: 750px) {
+    #headshot {
+        width: 85%;
+        height: 85%;
+    }
+}
