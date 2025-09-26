@@ -154,7 +154,7 @@ header {
 
 /*section*/
 section {
-    scroll-margin: var(--header-height) 1vh;
+    scroll-margin: var(--header-height) 2vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
