@@ -31,7 +31,7 @@ header {
     width: 100%;
     height: auto;
     min-height: var(--header-height);
-    /* Fix flicker */
+    /* Fix flicker, basically telling it to process in the GPU to prevent flicker */
     will-change: transform;
     transform: translateZ(0);
     backface-visibility: hidden;
