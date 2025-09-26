@@ -39,7 +39,8 @@ header {
     align-items: center;
     position: relative;
     flex-wrap: initial;
-    width: 70%;
+    width: 1200px;
+    margin: 0 4vw;
     gap: 2vw;
     padding: 10px 0; /* top-bottom left-right*/
 }
