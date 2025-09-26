@@ -279,9 +279,21 @@ section {
     background-color: ghostwhite;
     min-height: 100vh;
 }
-#about h1 {
+#about h1 , #about i {
     text-align: center;
     font-size: clamp(2rem, 4vw, 6rem);
+}
+#about i{
+    display: inline-block;
+    animation: pulse-up 3s ease-in-out infinite;
+    /* total cycle = 1s animation + 2s pause */
+}
+
+@keyframes pulse-up {
+    0%   { transform: scale(1) translateY(0); }
+    10%  { transform: scale(1.1) translateY(0); }
+    20%  { transform: scale(1.1) translateY(0); }
+    100% { transform: scale(1) translateY(0); }
 }
 
 
