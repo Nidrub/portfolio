@@ -221,7 +221,7 @@ section {
 
 /*text container*/
 .text-home {
-    min-width: 300px;
+    min-width: 365px;
     flex: 3 0 0;
     text-align: center;
 }
@@ -231,15 +231,14 @@ section {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 750;
-    font-size: 4rem;
+    font-size: clamp(2rem, 4vw, 4rem);
 }
 
 .text-home h2 {
     color: white;
     font-weight: lighter;
-    font-size: 2rem;
+    font-size: clamp(1.2rem, 4vw, 2rem);
 }
-
 .text-home p {
     padding-top: 10px;
     color: #bdbdbd;
@@ -247,20 +246,19 @@ section {
 }
 
 #headshot {
-    width: 60%;
-    height: 60%;
+    max-height: 400px;
     border: rgba(0, 0, 0, 0.3) solid 8px;
     border-radius: 50px;
-    margin: 25px 0; /*margin top-bottom left-right*/
+    margin-bottom: 25px;
 }
 
 .bubble {
     text-decoration: none;
     color: white;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: inline-block;
     align-content: center;
     justify-content: center;
@@ -335,9 +333,6 @@ section {
 
 /*at width 950*/
 @media (max-width: 950px) {
-    html {
-        font-size: 18px;
-    }
 
     .header-container {
         flex-wrap: wrap;
@@ -398,28 +393,8 @@ section {
     #nav-social li a:hover {
         transform: none;
     }
-
-    /*    home section*/
-    .text-home h1 {
-        font-size: 2rem;
-    }
-
-    .text-home h2 {
-        font-size: 1.5rem;
-    }
-
-    .text-home p {
-        font-size: 1rem;
-    }
-
-    /*    bubble*/
-    .bubble {
-        font-size: 1.8rem;
-        padding: 4px;
-    }
-
-
 }
+
 
 /*adjust the image for better experience */
 @media (max-width: 750px) {
@@ -427,16 +402,14 @@ section {
         flex-direction: column;
         align-content: center;
         justify-content: flex-start;
-        padding-top: 6vh;
+        padding-top: 10vh;
     }
 
     #headshot {
-        width: 85%;
-        height: 85%;
+        width: 70%;
     }
-
-    html {
-        font-size: 14px;
+    p{
+        font-size: 1rem;
     }
 
 
