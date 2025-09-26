@@ -387,6 +387,22 @@ section {
     #nav-social li a:hover {
         transform: none;
     }
+    /*    home section*/
+    .text-home h1{
+        font-size: 2rem;
+    }
+    .text-home h2{
+        font-size: 1.5rem;
+    }
+    .text-home p {
+        font-size: 1rem;
+    }
+    /*    bubble*/
+    .bubble {
+        font-size: 1.8rem;
+        padding: 4px;
+    }
+
 
 
 }
@@ -404,21 +420,6 @@ section {
     }
     html{
         font-size: 14px;
-    }
-    /*    home section*/
-    .text-home h1{
-        font-size: 2rem;
-    }
-    .text-home h2{
-        font-size: 1.5rem;
-    }
-    .text-home p {
-        font-size: 1rem;
-    }
-    /*    bubble*/
-    .bubble {
-        font-size: 1.8rem;
-        padding: 4px;
     }
 
 
