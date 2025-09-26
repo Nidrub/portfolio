@@ -13,8 +13,9 @@ html {
 :root {
     --header-height: 70px;
 }
+
 /*p*/
-p{
+p {
     font-size: 1.2rem;
 }
 
@@ -154,7 +155,6 @@ header {
 
 /*section*/
 section {
-    scroll-margin: var(--header-height) 1vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -217,22 +217,25 @@ section {
 
 /*text container*/
 .text-home {
-    min-width:300px;
+    min-width: 300px;
     flex: 3 0 0;
     text-align: center;
 }
-.text-home h1{
+
+.text-home h1 {
     background: linear-gradient(135deg, #C0382B, #DDE6E8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 750;
     font-size: 4rem;
 }
-.text-home h2{
+
+.text-home h2 {
     color: white;
     font-weight: lighter;
     font-size: 2rem;
 }
+
 .text-home p {
     padding-top: 10px;
     color: #bdbdbd;
@@ -244,7 +247,7 @@ section {
     height: 60%;
     border: rgba(0, 0, 0, 0.3) solid 8px;
     border-radius: 50px;
-    margin:25px 0; /*margin top-bottom left-right*/
+    margin: 25px 0; /*margin top-bottom left-right*/
 }
 
 .bubble {
@@ -269,14 +272,13 @@ section {
     background-color: rgba(143, 143, 143, 0.3);
 
 }
+
 /*we are here*/
-.test{
+.test {
     height: 100vh;
     background-color: yellow;
+
 }
-
-
-
 
 
 /*effects when opening */
@@ -292,34 +294,39 @@ section {
     opacity: 1;
     transform: translateX(0);
 }
-.fade-in-left{
+
+.fade-in-left {
     opacity: 0;
     transform: translateX(-80px);
     transition: opacity 1s ease, transform 1s ease;
 }
+
 .fade-in-left.show {
     opacity: 1;
     transform: translateX(0);
 }
-.fade-in-up{
+
+.fade-in-up {
     opacity: 0;
     transform: translateY(80px);
     transition: opacity 1s ease, transform 1s ease;
 }
-.fade-in-up.show{
-    opacity: 1;
-    transform: translateY(0);
-}
-.fade-in-down{
-    opacity: 0;
-    transform: translateY(-80px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-.fade-in-down.show {
+
+.fade-in-up.show {
     opacity: 1;
     transform: translateY(0);
 }
 
+.fade-in-down {
+    opacity: 0;
+    transform: translateY(-80px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in-down.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 
 /*at width 950*/
@@ -387,16 +394,20 @@ section {
     #nav-social li a:hover {
         transform: none;
     }
+
     /*    home section*/
-    .text-home h1{
+    .text-home h1 {
         font-size: 2rem;
     }
-    .text-home h2{
+
+    .text-home h2 {
         font-size: 1.5rem;
     }
+
     .text-home p {
         font-size: 1rem;
     }
+
     /*    bubble*/
     .bubble {
         font-size: 1.8rem;
@@ -404,21 +415,23 @@ section {
     }
 
 
-
 }
+
 /*adjust the image for better experience */
 @media (max-width: 750px) {
     #home {
         flex-direction: column;
         align-content: center;
-        justify-content:  flex-start;
+        justify-content: flex-start;
         padding-top: 6vh;
     }
+
     #headshot {
         width: 85%;
         height: 85%;
     }
-    html{
+
+    html {
         font-size: 14px;
     }
 
