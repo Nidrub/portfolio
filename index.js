@@ -47,7 +47,7 @@ document.querySelectorAll("#navigation a").forEach(link => {
             } else {
                 const target = document.querySelector(targetId);
                 if (target) {
-                    const headerHeight = header.offsetHeight + 3; // header height + 3px
+                    const headerHeight = header.offsetHeight -3; // header height - 3px
                     const topPos = target.offsetTop - headerHeight;
                     window.scrollTo({ top: topPos, behavior: "smooth" });
                 }
