@@ -155,6 +155,7 @@ header {
 /* container*/
 .container {
     width: 75%;
+    padding-bottom: 10px;
 }
 
 /*section*/
@@ -204,7 +205,6 @@ section {
     align-items: center;
     flex-wrap: wrap;
     gap: 12px;
-    padding-bottom: 10px;
     max-width: 1200px;
 }
 
@@ -239,6 +239,7 @@ section {
     font-weight: lighter;
     font-size: clamp(1.2rem, 4vw, 2rem);
 }
+
 .text-home p {
     padding-top: 10px;
     color: #bdbdbd;
@@ -274,26 +275,37 @@ section {
     background-color: rgba(143, 143, 143, 0.3);
 
 }
+
 /*TODO -> work on the about page (figure layer later*/
-#about{
+#about {
     background-color: ghostwhite;
     min-height: 100vh;
 }
-#about h1 , #about i {
+
+#about h1, #about i {
     text-align: center;
     font-size: clamp(2rem, 4vw, 6rem);
 }
-#about i{
+
+#about i {
     display: inline-block;
     animation: pulse-up 3s ease-in-out infinite;
     /* total cycle = 1s animation + 2s pause */
 }
 
 @keyframes pulse-up {
-    0%   { transform: scale(1) translateY(0); }
-    10%  { transform: scale(1.1) translateY(0); }
-    20%  { transform: scale(1.1) translateY(0); }
-    100% { transform: scale(1) translateY(0); }
+    0% {
+        transform: scale(1) translateY(0);
+    }
+    10% {
+        transform: scale(1.1) translateY(0);
+    }
+    20% {
+        transform: scale(1.1) translateY(0);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
 }
 
 
@@ -422,7 +434,8 @@ section {
     #headshot {
         width: 70%;
     }
-    p{
+
+    p {
         font-size: 1rem;
     }
 
