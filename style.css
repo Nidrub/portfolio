@@ -12,6 +12,7 @@ html {
 
 :root {
     --header-height: 70px;
+    --minimum-width: 365px;
 }
 
 /*p*/
@@ -215,13 +216,14 @@ section {
     justify-content: center;
     align-items: center;
     max-width: 600px;
+    min-width: var(--minimum-width);
     height: auto;
 
 }
 
 /*text container*/
 .text-home {
-    min-width: 365px;
+    min-width: var(--minimum-width);
     flex: 3 0 0;
     text-align: center;
 }
