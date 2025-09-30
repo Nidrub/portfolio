@@ -12,7 +12,7 @@ html {
 
 :root {
     --header-height: 70px;
-    --minimum-width: 365px;
+    --minimum-width-sub-container: 365px;
 }
 
 /*p*/
@@ -216,14 +216,14 @@ section {
     justify-content: center;
     align-items: center;
     max-width: 600px;
-    min-width: var(--minimum-width);
+    min-width: var(--minimum-width-sub-container);
     height: auto;
 
 }
 
 /*text container*/
 .text-home {
-    min-width: var(--minimum-width);
+    min-width: var(--minimum-width-sub-container);
     flex: 3 0 0;
     text-align: center;
 }
@@ -282,6 +282,11 @@ section {
 #about {
     background-color: ghostwhite;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 #about h1, #about i {
